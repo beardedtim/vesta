@@ -1,0 +1,330 @@
+_type: export
+__export_format: 4
+__export_date: 2023-03-04T15:30:57.137Z
+__export_source: insomnia.desktop.app:v2022.7.5
+resources:
+  - _id: req_828b1177b1654de184d2ec384ffea68b
+    parentId: fld_9d63ea06ba6d4d2ca501c8ebd3acd86f
+    modified: 1677941589927
+    created: 1677940451890
+    url: "{{ _.url }}"
+    name: Create User
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "tim@mck-p.com",
+        	"password": "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1677940521741.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9d63ea06ba6d4d2ca501c8ebd3acd86f
+    parentId: wrk_eb79384ddecc4fd8a7cccbb249a7e1cb
+    modified: 1677940488422
+    created: 1677940441741
+    name: Users
+    description: ""
+    environment:
+      url: "{{ _.base }}/users"
+    environmentPropertyOrder:
+      "&":
+        - url
+    metaSortKey: -1677940441741
+    _type: request_group
+  - _id: wrk_eb79384ddecc4fd8a7cccbb249a7e1cb
+    parentId: null
+    modified: 1677940361524
+    created: 1677940361524
+    name: Vesta
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_6c8cbb603a0542ddb46229318af05014
+    parentId: fld_976af8d44b7a4e988741ec195dea2f33
+    modified: 1677940645332
+    created: 1677940634218
+    url: "{{ _.url }}/{{ _.id }}"
+    name: See User
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1677940634218
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_976af8d44b7a4e988741ec195dea2f33
+    parentId: fld_9d63ea06ba6d4d2ca501c8ebd3acd86f
+    modified: 1677941591060
+    created: 1677940591593
+    name: User
+    description: ""
+    environment:
+      id: 7152b516-9a49-4488-8f91-f7d19f1f0b9b
+    environmentPropertyOrder:
+      "&":
+        - id
+    metaSortKey: -1677940521691.5
+    _type: request_group
+  - _id: req_8493546277fa4d4e942587726e0e2588
+    parentId: fld_976af8d44b7a4e988741ec195dea2f33
+    modified: 1677940630231
+    created: 1677940594322
+    url: "{{ _.url }}/{{ _.id }}/communities"
+    name: See Communities
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1677940594322
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_286e54662bf0494481c32ac197b78e40
+    parentId: fld_59afc1fb664642feb547374795932e50
+    modified: 1677940871876
+    created: 1677940862934
+    url: "{{ _.url }}"
+    name: List Communities
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1677940862934
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_59afc1fb664642feb547374795932e50
+    parentId: wrk_eb79384ddecc4fd8a7cccbb249a7e1cb
+    modified: 1677940573545
+    created: 1677940493600
+    name: Communities
+    description: ""
+    environment:
+      url: "{{ _.base }}/communities"
+    environmentPropertyOrder:
+      "&":
+        - url
+    metaSortKey: -1677940418727.5
+    _type: request_group
+  - _id: req_2c34f97c77244b1ba666760910e3d079
+    parentId: fld_59afc1fb664642feb547374795932e50
+    modified: 1677941646637
+    created: 1677940493607
+    url: "{{ _.url }}"
+    name: Create Community
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"name": "Roberts Family",
+        	"slug": "roberts"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1677940857609
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cb34fb4f04b94be9818cf9fd466b78b8
+    parentId: fld_59fe84c4307d4c55844572207e639796
+    modified: 1677941822106
+    created: 1677941811982
+    url: "{{ _.url }}/{{ _.id }}"
+    name: Get Community
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1677941811982
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_59fe84c4307d4c55844572207e639796
+    parentId: fld_59afc1fb664642feb547374795932e50
+    modified: 1677941480036
+    created: 1677940852284
+    name: Community
+    description: ""
+    environment:
+      id: d634e167-2cb0-49e2-b40b-b5765b28456d
+    environmentPropertyOrder:
+      "&":
+        - id
+    metaSortKey: -1677940852284
+    _type: request_group
+  - _id: req_5952b3ab851248a7b1071252c14f7965
+    parentId: fld_59fe84c4307d4c55844572207e639796
+    modified: 1677941501934
+    created: 1677941486023
+    url: "{{ _.url }}/{{ _.id }}/users"
+    name: Get Users in Community
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1677941486023
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1d24401f76244fe6836ce0f719441146
+    parentId: fld_59fe84c4307d4c55844572207e639796
+    modified: 1677941442768
+    created: 1677941354764
+    url: "{{ _.url }}/{{ _.id }}/users"
+    name: Add User
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"user_id": "7152b516-9a49-4488-8f91-f7d19f1f0b9b"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1677941354764
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cc6777aaa03541d58574db7493b655fc
+    parentId: fld_3c7d46ac878440a6a205fb23daf26205
+    modified: 1677940430671
+    created: 1677940420886
+    url: "{{ _.url }}/healthcheck"
+    name: Healthcheck
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1677940420886
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_3c7d46ac878440a6a205fb23daf26205
+    parentId: wrk_eb79384ddecc4fd8a7cccbb249a7e1cb
+    modified: 1677940418370
+    created: 1677940395714
+    name: Internal
+    description: ""
+    environment:
+      url: "{{_.base}}/.well-known"
+    environmentPropertyOrder:
+      "&":
+        - url
+    metaSortKey: -1677940395714
+    _type: request_group
+  - _id: env_456e7529f8ecfa41e857b32ed63dc14c8cdb3020
+    parentId: wrk_eb79384ddecc4fd8a7cccbb249a7e1cb
+    modified: 1677940361527
+    created: 1677940361527
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1677940361527
+    _type: environment
+  - _id: jar_456e7529f8ecfa41e857b32ed63dc14c8cdb3020
+    parentId: wrk_eb79384ddecc4fd8a7cccbb249a7e1cb
+    modified: 1677940361528
+    created: 1677940361528
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_65071f320eaf4902a3e443e4f8be4f4f
+    parentId: wrk_eb79384ddecc4fd8a7cccbb249a7e1cb
+    modified: 1677940361525
+    created: 1677940361525
+    fileName: Vesta
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_4c953f5184e8425993ff823c0145e71b
+    parentId: env_456e7529f8ecfa41e857b32ed63dc14c8cdb3020
+    modified: 1677940390911
+    created: 1677940368605
+    name: Local
+    data:
+      base: http://localhost:8080
+    dataPropertyOrder:
+      "&":
+        - base
+    color: "#00ff1e"
+    isPrivate: false
+    metaSortKey: 1677940368605
+    _type: environment
